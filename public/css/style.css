@@ -1,22 +1,76 @@
 @import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Cormorant:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Bangers&family=Chewy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
 body {
-    font-size: 12pt;
+    font-size: 15pt;
+    font-family: 'Cormorant', serif;
+    background-attachment:fixed;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl0ZUOsV0lZVPukaYt87EvOZi8XFvUiEuVQQ&s");
 }
 
 p {
     color: red;
 }
+.allergen {
+   color: #ff5500;
+}
+
+.allergen {
+   text-transform: uppercase;
+}
+#burgers {
+    background-color: black;
+    color: white;
+    border: 2px solid #f6de07;
+}
+section * h3 {
+    font-size: 19pt;
+    font-family: 'Rock Salt';
+}
+
+h2 {
+    font-size: 15pt;
+    font-family: 'Rock Salt';
+}
+button:hover {
+    background-color: rgb(105, 223, 105);
+    color: black;
+    font-weight: bold;
+    font-family: 'Rock Salt';
+    cursor: pointer;
+    transform: scale(1.8);
+}
+
+section {
+  margin: 30px;
+  
+  padding: 20px;
+}
+button {
+  margin-top: 20px;
+}
+#burgers div {
+  margin: 20px;
+  padding: 10px;
+}
+
+#contact {
+    background-color: white;
+    border: 2px solid #f6de07;
+}
 
 h1 {
-    font-family: 'Agbalumo';
-    font-size: 36pt;
+    font-family: 'Rock Salt';
+    font-size: 30pt;
+    color: rgb(17, 96, 17);
 }
 main, header, footer, nav ul {
-    max-width: 40rem;
+    max-width: 60rem;
     margin: 0 auto 0 auto;
 }
 main {
-    background-color: bisque;
+    background-color: rgb(11, 106, 68);
 }
 
 /* nav ul li {
@@ -27,12 +81,12 @@ main {
 } */
 
 header {
-    background-image: url("../img/polacks.jpg");
+    background-image: url("https://jamaicans.com/wp-content/uploads/Reasons-Jamaican-Are-The-Most-Chill-People-In-The-World.jpeg");
     background-size: cover;
     overflow: hidden;
     width: 100%;
-    height: 200px;
-    opacity: 0.5;
+    height: 370px;
+    opacity: 0.8;
 }
 
 header h1 {
