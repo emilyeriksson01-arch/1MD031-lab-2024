@@ -1,14 +1,14 @@
 <template>
     <div id="orders">
       <div id="orderList">
-        <div v-for="(order, key) in orders" v-bind:key="'order'+key">
-          #{{ key }}: {{ order.orderItems.join(", ") }}
-        </div>
+     
+        
+      
         <button v-on:click="clearQueue">Clear Queue</button>
       </div>
       <div id="dots">
-          <div v-for="(order, key) in orders" v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}" v-bind:key="'dots' + key">
-            {{ key }}
+          <div class="target" v-bind:style="{ left: deliveryPos.x + 'px', top: deliveryPos.y + 'px'}">
+            T
           </div>
       </div>
     </div>
@@ -21,16 +21,21 @@
     name: 'DispatcherView',
     data: function () {
       return {
-        orders: null,
+        deliveryPos: { x: null, y: null },
+        orders: {}
       }
     },
     created: function () {
-      socket.on('currentQueue', data =>
-        this.orders = data.orders);
+      socket.on('addOrder', data => {
+      console.log("Dispatcher received:", order.deliveryPos);
+      this.deliveryPos = order.deliveryPos;
+      });
     },
     methods: {
       clearQueue: function () {
+        this.orders = {};
         socket.emit('clearQueue');
+        this.deliveryPos = { x: 0, y: 0 };
       },
       changeStatus: function(orderId) {
         socket.emit('changeStatus', {orderId: orderId, status: "Annan status"});

@@ -107,16 +107,6 @@ header h1 {
     margin: 0 auto;
 }
 
-.TheRastaclatFavorite {
-    grid-column: 1;
-}
-.Originalbombaclat {
-    grid-column: 2;
-}
-.TheRichMillionaire {
-    grid-column: 3;
-}
-
 nav ul {
     display: grid;
     grid-template-columns: repeat(auto-fill, 9.25em);

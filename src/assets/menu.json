@@ -1,21 +1,36 @@
 [{
-    "name": "Veggie Bliss", 
-    "kCal": 500, 
-    "url": "https://images-bonnier.imgix.net/files/ifo/production/20220412084608/Kødfri-burger-1.jpg?auto=compress,format&w=1024%201024w",
-    "lactose": false, 
-    "gluten": false
+    "name": "TheRastaclatFavorite", 
+    "price":"$1000 dollar",
+    "url":"https://www.foodandwine.com/thmb/DI29Houjc_ccAtFKly0BbVsusHc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/crispy-comte-cheesburgers-FT-RECIPE0921-6166c6552b7148e8a8561f7765ddf20b.jpg",
+    "ingredients": [
+      { "name": "Beef", "allergen": true },
+      { "name": "Avocado", "allergen": false },
+      { "name": "Red Onion", "allergen": false },
+      { "name": "Egg", "allergen": true },
+      { "name": "Brioche Bun", "allergen": false }
+    ]
 },
 {
-    "name": "Veggie Bliss", 
-    "kCal": 500, 
-    "url": "https://images-bonnier.imgix.net/files/ifo/production/20220412084608/Kødfri-burger-1.jpg?auto=compress,format&w=1024%201024w",
-    "lactose": false, 
-    "gluten": false
+    "name": "Originalbombaclat", 
+    "price":"$million dollar",
+    "url": "https://www.certifiedangusbeef.com/_next/image?url=https%3A%2F%2Fappetizing-cactus-7139e93734.media.strapiapp.com%2FSweet_Jamaican_Burger_6bc6c7e649.jpeg&w=1920&q=75",
+    "ingredients": [
+      { "name": "Beef", "allergen": true },
+      { "name": "Corn", "allergen": false },
+      { "name": "Lettuce", "allergen": false },
+      { "name": "Mayonnaise", "allergen": true },
+      { "name": "Sesame Bun", "allergen": true }
+    ]
 },
 {
-    "name": "Veggie Bliss", 
-    "kCal": 500, 
-    "url": "https://images-bonnier.imgix.net/files/ifo/production/20220412084608/Kødfri-burger-1.jpg?auto=compress,format&w=1024%201024w",
-    "lactose": false, 
-    "gluten": false
+    "name": "TheRichMillionaire", 
+    "price":"$1 000 000 dollar",
+    "url": "https://www.honestburgers.co.uk/wp-content/uploads/2021/01/honest-beef-bacon-red-leicester-cheese-apricot-and-scoth-bonnet-ketchup-plantain-and-curry-mayo-page.jpg",
+    "ingredients": [
+      { "name": "Beef", "allergen": true },
+      { "name": "Corn", "allergen": false },
+      { "name": "Lettuce", "allergen": false },
+      { "name": "Mayonnaise", "allergen": true },
+      { "name": "Sesame Bun", "allergen": true }
+    ]
 }]
