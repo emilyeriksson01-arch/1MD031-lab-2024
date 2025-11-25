@@ -1,13 +1,33 @@
 <template>
     <div id="orders">
       <div id="orderList">
-     
-        
-      
+        <div
+        v-for="(order, orderId) in orders"
+        :key="'order' + orderId">
+        #{{ orderId }} <br>
+        Items:
+              <ul>
+                <li
+                  v-for="(amount, burgerName) in order.orderItems"
+                  :key="burgerName">
+                  {{ amount }} × {{ burgerName }}
+                </li>
+              </ul> 
+        <p class="personalInfo"> Name: {{ order.fn }} </p>
+        <p class="personalInfo">Email: {{ order.em }}</p>
+        <p class="personalInfo">Payment Method: {{ order.rcp }}</p>
+        <p class="personalInfo">Gender: {{ order.gender }}</p>
+        <hr></hr>
+      </div>
         <button v-on:click="clearQueue">Clear Queue</button>
       </div>
       <div id="dots">
-          <div class="target" v-bind:style="{ left: deliveryPos.x + 'px', top: deliveryPos.y + 'px'}">
+          <div
+        v-for="(order, orderId) in orders"
+        :key="'dots' + orderId"
+        class="target"
+        :style="{ left: order.deliveryPos.x + 'px', top: order.deliveryPos.y + 'px' }"
+      >
             T
           </div>
       </div>
@@ -21,21 +41,20 @@
     name: 'DispatcherView',
     data: function () {
       return {
-        deliveryPos: { x: null, y: null },
         orders: {}
       }
     },
     created: function () {
-      socket.on('addOrder', data => {
-      console.log("Dispatcher received:", order.deliveryPos);
-      this.deliveryPos = order.deliveryPos;
+      socket.on('currentQueue', data => {
+      console.log("Dispatcher received:", data);
+      this.orders = data.orders;
       });
     },
     methods: {
       clearQueue: function () {
-        this.orders = {};
+        this.orderItems = {};
         socket.emit('clearQueue');
-        this.deliveryPos = { x: 0, y: 0 };
+        this.orders = { };
       },
       changeStatus: function(orderId) {
         socket.emit('changeStatus', {orderId: orderId, status: "Annan status"});
@@ -73,6 +92,12 @@
     width:20px;
     height:20px;
     text-align: center;
+  }
+  
+  .personalInfo {
+    color: grey;
+    font-size: 15px;
+    margin: 2px 0;
   }
   </style>
   

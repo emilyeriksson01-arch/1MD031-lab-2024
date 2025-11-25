@@ -35,15 +35,6 @@
     <label for="email">E-mail Address</label><br>
     <input type="email" id="email" v-model="em" required="required" placeholder="E-mail address">
 </p>
-<p>
-    <label for="streetname">Street name</label><br>
-    <input type="text" id="streetname" v-model="sn" required="required" placeholder="Street name">
-</p>
-<p>
-    <label for="housenumber">House Number</label><br>
-    <input type="number" id="housenumber" v-model="hn" required="required" placeholder="House Number">
-
-</p>
 <p> 
    <label for="paymentmethod">Payment Method</label> <br>
    <select v-model="rcp">
@@ -55,10 +46,10 @@
 </p>
 <div style="display: inline-block">
     <p>Provide your Gender:</p>
-    <input type="radio" id="female" v-model="gender" value="female" checked />
+    <input type="radio" id="female" v-model="gender" value="Female" checked />
     <label for="female">Female</label>
 
-    <input type="radio" id="male" v-model="gender" value="male">
+    <input type="radio" id="male" v-model="gender" value="Male">
     <label for="male">Male</label>
 
     <input type="radio" id="notsay" v-model="gender" value="Do not wish to provide">
@@ -134,8 +125,6 @@ export default {
       burgers: menu,
       fn: "",
       em: "",
-      sn: "",
-      hn: "",
       rcp: "",
       gender: "",
       amountOrdered: {},
@@ -164,14 +153,15 @@ addOrder() {
     orderId: this.getOrderNumber(),
     orderItems: this.amountOrdered,
     fn: this.fn,
+    em: this.em,
+    rcp: this.rcp,
+    gender:this.gender,
     deliveryPos:this.deliveryPos,
     }
   );
     
   console.log("Full name:", this.fn);
   console.log("Email:", this.em);
-  console.log("Street:", this.sn);
-  console.log("House number:", this.hn);
   console.log("Payment method:", this.rcp);
   console.log("Gender:", this.gender);
   console.log("Amount ordered:", this.amountOrdered);
